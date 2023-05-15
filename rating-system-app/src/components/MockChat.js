@@ -12,21 +12,21 @@ const MockChat = () => {
 	];
 
 	return (
-		<div className='flex flex-col justify-between border rounded-2xl p-5 border-stone-400'>
+		<div className='flex flex-col justify-between border rounded-2xl p-3 md:p-5 border-stone-400'>
 			<div>
 				<div className='flex gap-5 items-center mb-2 text-gray-950'>userB</div>
 				<hr />
 			</div>
 
-			<div className='overflow-y-scroll px-5 py-2' id='messages'>
+			<div className='overflow-y-scroll py-2' id='messages'>
 				<div className='flex flex-col gap-2'>
 					{messages !== undefined &&
 						messages.map((message, index) => {
 							return (
 								<div
 									key={index}
-									className={`flex ${
-										message.sender === 'userA' && 'justify-end'
+									className={`flex pr-10 ${
+										message.sender === 'userA' && 'justify-end pl-10 pr-1'
 									}`}
 								>
 									<div
@@ -36,7 +36,9 @@ const MockChat = () => {
 												: 'border-2 border-gray-500 bg-gray-300 text-gray-950 rounded-tr-none'
 										} p-3 rounded-xl max-w-xl flex flex-col gap-1`}
 									>
-										<p>{message.text}</p>
+										<p className='text-gray-950 text-xs md:text-sm'>
+											{message.text}
+										</p>
 									</div>
 								</div>
 							);
