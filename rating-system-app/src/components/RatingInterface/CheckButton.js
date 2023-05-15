@@ -13,7 +13,7 @@ const CheckButton = ({ onButtonClick, content }) => {
 	return (
 		<button
 			type='button'
-			className='w-1/4 hover:scale-105'
+			className='w-1/12 hover:scale-105'
 			onClick={clickHandler}
 		>
 			{content === 'no' ? <StopIcon /> : <CheckIcon />}

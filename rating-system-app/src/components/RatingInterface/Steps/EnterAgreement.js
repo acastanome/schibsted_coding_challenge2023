@@ -34,9 +34,9 @@ const EnterAgreement = ({
 	};
 
 	return (
-		<div className='flex-row w-full p-1 border-2 rounded-md text-center border-stone-400'>
-			<p className='w-3/4 text-xs'>Do you want to enter an agreement?</p>
-			<div className='w-3/4 h-1/4 p-1 flex justify-evenly'>
+		<div className='flex flex-col w-full p-2 border rounded-2xl text-center border-stone-400 mt-1'>
+			<p className='text-xs text-center'>Do you want to enter an agreement?</p>
+			<div className='max-h-min p-1 flex justify-evenly'>
 				<CheckButton onButtonClick={buttonClickHandler} content={'yes'} />
 				<CheckButton onButtonClick={buttonClickHandler} content={'no'} />
 			</div>

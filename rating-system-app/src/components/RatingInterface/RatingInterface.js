@@ -14,7 +14,7 @@ import FinishedAgreement from './Steps/FinishedAgreement';
 
 const RatingInterface = () => {
 	const [exchangeStatusA, setExchangeStatusA] = useState(0);
-	const [exchangeStatusB, setExchangeStatusB] = useState(1);
+	const [exchangeStatusB, setExchangeStatusB] = useState(0);
 
 	if (exchangeStatusA === 0) {
 		return (

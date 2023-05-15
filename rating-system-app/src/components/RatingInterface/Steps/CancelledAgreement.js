@@ -1,7 +1,7 @@
 const CancelledAgreement = () => {
 	return (
-		<div className='flex-row w-full p-1 border-2 rounded-md text-center border-stone-400'>
-			<p className='w-3/4 text-xs'>Transaction was cancelled</p>
+		<div className='flex flex-col w-full p-2 border rounded-2xl text-center border-stone-400 mt-1'>
+			<p className='text-xs text-center'>Transaction was cancelled</p>
 		</div>
 	);
 };

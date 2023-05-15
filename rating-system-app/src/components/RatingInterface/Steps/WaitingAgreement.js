@@ -14,10 +14,10 @@ const WaitingAgreement = ({ setExchangeStatusA, setExchangeStatusB }) => {
 
 	return (
 		<div className='flex-row w-full p-1 border-2 rounded-md text-center border-stone-400'>
-			<p className='w-3/4 text-xs'>
+			<p className='text-xs text-center'>
 				Waiting for other user to enter the agreement
 			</p>
-			<div className='w-3/4 h-1/4 p-1 flex justify-evenly'>
+			<div className='max-h-min p-1 flex justify-evenly'>
 				<CheckButton onButtonClick={buttonClickHandler} content={'no'} />
 			</div>
 		</div>
