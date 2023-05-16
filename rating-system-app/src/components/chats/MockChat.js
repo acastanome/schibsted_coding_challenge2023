@@ -1,27 +1,17 @@
-const MockChat = () => {
-	const messages = [
-		{
-			text: 'Hello! I would like to buy this. Can I pick it up tomorrow at 15? ',
-			sender: 'userA',
-		},
-		{
-			text: 'Sure',
-			sender: 'userB',
-		},
-		{ text: 'Coolio', sender: 'userA' },
-	];
-
+const MockChat = ({ chat }) => {
 	return (
 		<div className='flex flex-col justify-between border rounded-2xl p-3 md:p-5 border-stone-400'>
 			<div>
-				<div className='flex gap-5 items-center mb-2 text-gray-950'>userB</div>
+				<div className='flex gap-5 items-center mb-2 text-gray-950'>
+					{chat.userB}
+				</div>
 				<hr />
 			</div>
 
 			<div className='overflow-y-scroll py-2' id='messages'>
 				<div className='flex flex-col gap-2'>
-					{messages !== undefined &&
-						messages.map((message, index) => {
+					{chat.messages !== undefined &&
+						chat.messages.map((message, index) => {
 							return (
 								<div
 									key={index}

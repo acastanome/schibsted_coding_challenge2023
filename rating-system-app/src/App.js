@@ -1,7 +1,108 @@
-import MockChat from './components/MockChat';
+import { useState } from 'react';
+import ChatList from './components/chats/ChatList';
+import MockChat from './components/chats/MockChat';
 import RatingInterface from './components/RatingInterface/RatingInterface';
 
 const App = () => {
+	const [chats, setChats] = useState([
+		{
+			chatId: 45,
+			userAId: 123,
+			userA: 'Hannah Banana',
+			userBId: 22,
+			userB: 'Emma',
+			messages: [
+				{
+					text: 'Hello! I would like to buy this. Can I pick it up tomorrow at 15? ',
+					sender: 'userA',
+				},
+				{
+					text: 'Sure',
+					sender: 'userB',
+				},
+				{ text: 'Coolio', sender: 'userA' },
+			],
+			exchangeStatusA: 0,
+			exchangeStatusB: 0,
+		},
+		{
+			chatId: 46,
+			userAId: 123,
+			userA: 'Hannah Banana',
+			userBId: 34,
+			userB: 'Mark',
+			messages: [
+				{
+					text: 'Hello! I would like to buy this. Can I pick it up tomorrow at 15? ',
+					sender: 'userA',
+				},
+				{
+					text: 'No, only today at midnight',
+					sender: 'userB',
+				},
+			],
+			exchangeStatusA: 0,
+			exchangeStatusB: 0,
+		},
+		{
+			chatId: 47,
+			userAId: 123,
+			userA: 'Hannah Banana',
+			userBId: 44,
+			userB: 'Sibelius',
+			messages: [
+				{
+					text: 'Hello! I would like to buy this. Can I pick it up tomorrow at 15? ',
+					sender: 'userA',
+				},
+				{
+					text: 'Sure, the address is MoomiValley 3 B',
+					sender: 'userB',
+				},
+				{ text: 'Coolio', sender: 'userA' },
+				{
+					text: 'Feedback time!',
+					sender: 'userB',
+				},
+			],
+			exchangeStatusA: 2,
+			exchangeStatusB: 2,
+		},
+		{
+			chatId: 50,
+			userAId: 123,
+			userA: 'Hannah Banana',
+			userBId: 55,
+			userB: 'Salla',
+			messages: [
+				{
+					text: 'Hello! I would like to buy this. Can I pick it up tomorrow at 15? ',
+					sender: 'userA',
+				},
+				{
+					text: 'Sure',
+					sender: 'userB',
+				},
+				{ text: 'Coolio', sender: 'userA' },
+				{
+					text: 'Best day ever, gave you a great review!',
+					sender: 'userB',
+				},
+			],
+			exchangeStatusA: 2,
+			exchangeStatusB: 3,
+		},
+	]);
+
+	const [selectedChat, setSelectedChat] = useState(chats[0]);
+
+	const chatClickHandler = (selectedId) => {
+		const chat = chats.filter((c) => c.chatId === selectedId);
+		setSelectedChat(() => {
+			return chat[0];
+		});
+	};
+
 	return (
 		<div className='flex flex-col w-screen min-h-screen p-1'>
 			<div className='w-screen max-h-min p-2'>
@@ -12,17 +113,10 @@ const App = () => {
 				></img>
 			</div>
 			<div className='flex flex-row w-screen min-h-full p-1 justify-center'>
-				<div className='flex flex-col w-1/3 border rounded-2xl p-3 border-stone-400'>
-					<div className='w-full border rounded-xl py-1 px-2 border-stone-400 mb-1 text-gray-950 text-sm'>
-						Mock chat 1
-					</div>
-					<div className='w-full border rounded-xl py-1 px-2 border-stone-400 text-gray-950 text-sm'>
-						Mock chat 2
-					</div>
-				</div>
+				<ChatList chats={chats} onChatClick={chatClickHandler} />
 				<div className='flex-row md:w-2/4 min-h-full text-center p-2'>
-					<MockChat />
-					<RatingInterface />
+					<MockChat chat={selectedChat} />
+					<RatingInterface chat={selectedChat} />
 				</div>
 			</div>
 		</div>
