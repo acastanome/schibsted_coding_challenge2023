@@ -51,6 +51,26 @@
   - Username will be clickable, and direct to a user profile page, containing: Username, user total rating, link to users products, and reviews from previous sells/ buys.
 - To add transparency to the reviews, both seller and buyer reviews will be displayed next to each other.
 
+## Running the project:
+- To run the project, clone the repo, and in the rating-system-app directory, run the command "npm install". After that, run the command "npm start".
+- The previous step should open your browser, running the project in http://localhost:3000/ Make sure your port 3000 is free.
+- The project was developed in Chrome.
+- The step 3 of the rating process, the feedback, has not been connected with the rest of the project. To see it in action, you can follow this steps. In App.js:
+  1. Comment out everything inside the App component.
+	2. Uncomment line 8, which contains return Review.
+	3. Uncomment line 5, which imports Review component
+	4. Save the file, then reload the browser.
+
+## Other important info:
+- The feedback process aims to gather data. In the presentation_media directory there is 3 videos, which show how the process work.
+- The rating algorithm: the user-rating becomes visible to other users when five (5) ratings have been given to a user, emphasising the latest ratings. It can be found in AverageScore.js file, since it wasn't connected to the rest of the interface yet.
+- To showcase how the gathered information could be used, we have added 3 pdf files in presentation_media directory:
+  1. product_page and search_page: The username and user rating could be displayed next to the announcements.
+  2. Clicking on a username would lead to a profile page, showcasing that users information, a link to active products, and the reviews that user has given and received.
+
+## Stack:
+  React.js, TailwindCSS.
+
 ## Sources
 
 - circle-stop.svg: https://github.com/FortAwesome/Font-Awesome/blob/6.x/svgs/regular/circle-stop.svg
