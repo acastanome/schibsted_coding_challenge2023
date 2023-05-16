@@ -1,0 +1,108 @@
+/*
+
+SVG stuff
+
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wheel {
+  background-color: white;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  margin-bottom: 30px;
+}
+
+.wheel:hover {
+  cursor: pointer;
+}
+
+#wheel-svg {
+  width: 50px;
+  height: 50px;
+}
+
+.btn {
+  background-color: #9d3bb3;
+  font-size: 18px;
+	padding: 10px 15px 14px 15px;
+  border-radius: 6px;
+  width: fit-content;
+  color: #f7f7f7;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.review-card {
+  width: 50%;
+  background-color: #ededed;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 30px 20px 30px;
+  color: #2e2e2e;
+  margin: auto;
+}
+
+.review-form {
+  justify-content: flex-start;
+  /* align-items: flex-start; */
+}
+
+.review-form input {
+  margin-right: 10px;
+  margin-bottom: 15px;
+}
+
+.review-form textarea {
+  margin-top: 15px;
+}
+
+.review-card__title {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.review-card__send-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.container textarea {
+
+  border-style: none;
+    border-color: Transparent;
+    overflow: auto;
+    outline: none;
+    width: 300px;
+    height: 70px;
+    resize: none;
+    border-radius: 6px;
+    padding-top: 5px;
+    padding-left: 7px;
+    /* margin-top: 30px; */
+}
+
+.review-card-sent {
+ padding-top: 80px;
+ padding-bottom: 80px;
+}
+

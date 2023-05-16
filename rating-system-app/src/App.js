@@ -1,7 +1,11 @@
 import MockChat from './components/MockChat';
 import RatingInterface from './components/RatingInterface/RatingInterface';
+import Review from './Review.js'
 
 const App = () => {
+	// return (
+	// 	<Review />
+	// )
 	return (
 		<div className='flex flex-col w-screen min-h-screen p-1'>
 			<div className='w-screen max-h-min p-2'>
