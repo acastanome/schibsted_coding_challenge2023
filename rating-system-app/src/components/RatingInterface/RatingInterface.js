@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import EnterAgreement from './Steps/EnterAgreement';
 import WaitingAgreement from './Steps/WaitingAgreement';
 import FeedbackAgreement from './Steps/FeedbackAgreement';
@@ -12,9 +12,14 @@ import FinishedAgreement from './Steps/FinishedAgreement';
 // 	3 Finished agreement: Review has been sent
 // 	4 Exchange was cancelled
 
-const RatingInterface = () => {
+const RatingInterface = ({ chat }) => {
 	const [exchangeStatusA, setExchangeStatusA] = useState(0);
 	const [exchangeStatusB, setExchangeStatusB] = useState(0);
+
+	useEffect(() => {
+		setExchangeStatusA(chat.exchangeStatusA);
+		setExchangeStatusB(chat.exchangeStatusB);
+	}, [chat]);
 
 	if (exchangeStatusA === 0) {
 		return (
