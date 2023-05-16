@@ -56,3 +56,7 @@
 - circle-stop.svg: https://github.com/FortAwesome/Font-Awesome/blob/6.x/svgs/regular/circle-stop.svg
 
 - circle-check: https://github.com/FortAwesome/Font-Awesome/blob/6.x/svgs/regular/circle-check.svg
+
+- wheel animation: https://codepen.io/Coderesting/pen/BaaELKv
+
+
