@@ -2,13 +2,11 @@ import { useState } from 'react';
 import ChatList from './components/chats/ChatList';
 import MockChat from './components/chats/MockChat';
 import RatingInterface from './components/RatingInterface/RatingInterface';
-import Review from './Review.js';
+// import Review from './components/Review/Review.js';
 
 const App = () => {
-	// return (
-	// 	<Review />
-	// )
-	const [chats, setChats] = useState([
+	// return <Review />;
+	const [chats] = useState([
 		{
 			chatId: 45,
 			userAId: 123,
