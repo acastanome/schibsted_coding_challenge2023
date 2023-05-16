@@ -91,7 +91,7 @@ const App = () => {
 					sender: 'userB',
 				},
 			],
-			exchangeStatusA: 2,
+			exchangeStatusA: 3,
 			exchangeStatusB: 3,
 		},
 	]);
